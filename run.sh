@@ -13,5 +13,5 @@ export JVM_ARGS="-Xmn${n}m -Xms${s}m -Xmx${x}m"
 echo "Staring with JVM args: $JVM_ARGS on `date`" 
 echo "jmeter args=$@"
 #use none-gui mode by default
-jmeter -n $@
+jmeter $@
 
