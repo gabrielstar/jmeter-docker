@@ -19,6 +19,8 @@ RUN apk update \
     && update-ca-certificates \
     	&& apk add --update curl unzip bash tzdata mc \
     	&& apk add --update openjdk8-jre \
+	#hack against https bug in alpine and missing .so libs
+	&& apk add --no-cache nss \
 	&& echo "Installed jmeter requirements and basic apk tools" \
 	&& cp /usr/share/zoneinfo/Europe/Warsaw /etc/timezone \
     && rm -rf /var/cache/apk/* \
