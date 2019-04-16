@@ -1,0 +1,4 @@
+#fix line endings
+dos2unix.exe *
+#run container and enter shell
+docker run -it --entrypoint /bin/bash jmeter 
